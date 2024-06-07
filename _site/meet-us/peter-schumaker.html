@@ -13,8 +13,6 @@
 
   <link rel="stylesheet" id="divi-style-css" href="http://localhost:4000/css/style.css" type="text/css" media="all">
   <link rel='stylesheet' id='dashicons-css' href='http://localhost:4000/css/dashicons.min.css' type='text/css' media='all'/>
-  <script type="text/javascript" src="http://localhost:4000/scripts/jquery.min.js" id="jquery-core-js"></script>
-  <!-- <script type="text/javascript" src="http://localhost:4000/scripts/jquery-migrate.min.js" id="jquery-migrate-js"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 </head>
 
@@ -183,8 +181,6 @@
     </div>
 </div>
       
-<script type="text/javascript" src="http://localhost:4000/scripts/custom.min.js" id="divi-custom-script-js"></script>
-<script type="text/javascript" src="http://localhost:4000/scripts/common.js" id="et-core-common-js"></script>
 <!-- #main-content -->
 <footer id="main-footer">
     <div class="container">
@@ -192,13 +188,7 @@
             <div class="footer-widget">
                 <div id="text-2" class="fwidget et_pb_widget widget_text">
                     <div class="textwidget">
-                        <p>
-                            <script>
-                            const date = new Date();
-                            const year = date.getFullYear();
-                            document.write(`&copy; ${year} FidelityCounseling.com`);
-                            </script>
-                        </p>
+                        <p id="copyright"></p>
                         <p>
                             <a target="_blank" href="http://localhost:4000/documents/privacy-notice-090821.pdf" rel="noopener">Privacy Notice</a>
                         </p>
@@ -210,6 +200,11 @@
     </div>
 </footer>
 
+<script>
+    const date = new Date();
+    const year = date.getFullYear();
+    document.getElementById("copyright").innerHTML = `&copy; ${year} FidelityCounseling.com`;
+    </script>
     </div>
   </body>
 </html>
