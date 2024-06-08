@@ -21,7 +21,7 @@ layout: default
                                     </div>
                                     <div class="et_pb_module et_pb_accordion et_pb_accordion_0">
 
-                                        <div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_close">
+                                        <div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0 et_pb_toggle_close">
 
                                             <h5 class="et_pb_toggle_title">What is the cost of therapy?</h5>
                                             <div class="et_pb_toggle_content clearfix">
@@ -56,25 +56,21 @@ layout: default
 </div>
 
 <style>
-    .et_pb_toggle_content {
-        transition: 0.4s;
-        display: none;
-        overflow: hidden;
-    }
     
 </style>
 
 <script>
-    let togglePanels = document.getElementsByClassName("et_pb_toggle_title");
+    let togglePanels = document.getElementsByClassName("et_pb_toggle");
     
     for (let i = 0; i < togglePanels.length; i++) {
         togglePanels[i].addEventListener("click", function() {
         this.classList.toggle("et_pb_toggle_open");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
+        let contentPanel = this.lastElementChild;
+
+        if (contentPanel.style.display === "block") {
+            contentPanel.style.display = "none";
         } else {
-            panel.style.display = "block";
+            contentPanel.style.display = "block";
         }
         });
     }

@@ -11438,7 +11438,19 @@ ul.et_pb_tabs_controls:after {
 }
 
 .et_pb_toggle {
-    border: 1px solid #d9d9d9
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+}
+
+.et_pb_toggle_content {
+    transition: 0.4s;
+    display: none;
+    overflow: hidden;
+}
+
+.et_pb_toggle:hover {
+    background-color: #dadada;
+    transition: background-color .3s ease-in-out 0s;
 }
 
 .et_pb_toggle_close {
@@ -11453,7 +11465,6 @@ ul.et_pb_tabs_controls:after {
 .et_pb_accordion .et_pb_toggle.et_pb_text_align_left .et_pb_toggle_title, .et_pb_accordion .et_pb_toggle.et_pb_text_align_left h5.et_pb_toggle_title, .et_pb_accordion.et_pb_text_align_left .et_pb_toggle_title, .et_pb_accordion.et_pb_text_align_left h5.et_pb_toggle_title, .et_pb_toggle .et_pb_toggle_title, .et_pb_toggle h5.et_pb_toggle_title, .et_pb_toggle.et_pb_text_align_left .et_pb_toggle_title, .et_pb_toggle.et_pb_text_align_left h5.et_pb_toggle_title {
     position: relative;
     padding: 0 50px 0 0;
-    cursor: pointer
 }
 
 .et_pb_toggle_close .et_pb_toggle_title, .et_pb_toggle_close h5.et_pb_toggle_title {
