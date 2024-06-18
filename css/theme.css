@@ -2095,7 +2095,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 #et_mobile_nav_menu {
-    display: none;
+    /* display: none; */
     float: right
 }
 
@@ -5325,7 +5325,7 @@ ul.et_pb_side_nav .side_nav_item a.active {
 }
 
 .et_mobile_nav_menu {
-    display: none;
+    /* display: none; */
     float: right
 }
 
