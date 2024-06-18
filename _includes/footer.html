@@ -19,7 +19,19 @@
 </footer>
 
 <script>
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function toggleMobileNav() {
+        var x = document.getElementById("mobileLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+<script>
     const date = new Date();
     const year = date.getFullYear();
     document.getElementById("copyright").innerHTML = `&copy; ${year} FidelityCounseling.com`;
-    </script>
+</script>

@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="http://localhost:4000/css/theme.css" type="text/css" media="all" />
   <link rel="stylesheet" id="divi-style-css" href="http://localhost:4000/css/style.css" type="text/css" media="all">
   <link rel='stylesheet' id='dashicons-css' href='http://localhost:4000/css/dashicons.min.css' type='text/css' media='all'/>
-  
   <link rel='stylesheet' id='divi-fonts-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext' type='text/css' media='all'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 </head>
 
@@ -53,10 +52,37 @@
                     </li>
                 </ul>
             </nav>
-
-            <div id="et_mobile_nav_menu">
-                <div class="mobile_nav closed">
-                    <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+            
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar -->
+            <div class="mobile-container">
+                <div class="mobile_nav">
+                    <div id="mobileLinks">
+                        <ul id="top-menu" class="nav">
+                            <li>
+                                <a href="http://localhost:4000/index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Meet Us</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="http://localhost:4000/meet-us/donna-tilley.html">Donna Tilley</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:4000/meet-us/peter-schumaker.html">Peter Schumaker</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://localhost:4000/faq/index.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost:4000/contact-us/index.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,10 +183,22 @@
 </footer>
 
 <script>
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function toggleMobileNav() {
+        var x = document.getElementById("mobileLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+<script>
     const date = new Date();
     const year = date.getFullYear();
     document.getElementById("copyright").innerHTML = `&copy; ${year} FidelityCounseling.com`;
-    </script>
+</script>
     </div>
   </body>
 </html>
